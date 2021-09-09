@@ -23,7 +23,7 @@
 
         <div class="elenco" >
     <ul v-if="toDos.length > 0" > 
-        <li id="list" v-for="(todo, index) in toDos " @click="trueFalse()" :class="trueOrFalse">
+        <li v-for="(todo, index) in toDos" :class="todo.done == true ? 'green' : 'red'" @click="trueFalse(index)">
 {{todo.title}}
 <i class="fas fa-times" v-on:click="removeToDo(index)"></i>
 <hr>

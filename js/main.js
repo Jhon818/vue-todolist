@@ -37,18 +37,17 @@ const app = new Vue (
         this.toDos.splice(index,1)
     },
 
-    trueFalse() {
-        for (const key in this.toDos) {
-            if (this.toDos[key].done === true) {
-                return  document.getElementById("list").style.color = "green";
-                     
-                 }
-                 else {
-                  return  document.getElementById("list").style.color = "red";
-                 }
-        }
+    
+        trueFalse(index) {
+            if (this.toDos[index].done === true) {
+              this.toDos[index].done = false;
+            }
+            else{
+              this.toDos[index].done = true;
+            }
+          }
            
-    }
+    
 }
     });
 
