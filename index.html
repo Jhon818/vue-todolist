@@ -22,10 +22,11 @@
     </div>
 
         <div class="elenco" >
-    <ul v-if="toDos.length > 0">
-        <li v-for="(todo, index) in toDos">
-{{todo}}
+    <ul v-if="toDos.length > 0" > 
+        <li id="list" v-for="(todo, index) in toDos " @click="trueFalse()">
+{{todo.title}}
 <i class="fas fa-times" v-on:click="removeToDo(index)"></i>
+<hr>
         </li>
     </ul>
     <h2 v-else>Non ci sono toDo</h2>

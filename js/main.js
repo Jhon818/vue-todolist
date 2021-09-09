@@ -7,24 +7,41 @@ const app = new Vue (
           newToDo:"",
           toDos: [{
             title: 'Fare i compiti',
-            done: true
+            done: true,
+            drawer: [
+                "Cose da fare 1",
+                "Cose da fare 2",
+                "Cose da fare 3"
+            ]
         },
         {
             title: 'Fare la spesa',
-            done: false
+            done: false,
+            drawer: [
+                "Cose da fare 1",
+                "Cose da fare 2",
+                "Cose da fare 3"
+            ]
         }],
 
     },
     methods: {
         addToDo() {
             if(this.newToDo != "")
-            this.toDos.push(this.newToDo);
+            this.toDos.push({title:this.newToDo, done: false});
             this.newToDo = "";
-        }
-    },
+        },
+   
     removeToDo(index) {
-        this.toDos.delete(index,1)
-    }
+        this.toDos.splice(index,1)
+    },
 
+    trueFalse() {
+           if (document.getElementById("list").checked) {
+          return  document.getElementById("list").style.color = "green";
+               
+           }
+    }
+}
     });
 

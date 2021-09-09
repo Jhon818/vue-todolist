@@ -22,9 +22,29 @@ header {
 
 .new-todo {
     text-align: center;
+    padding: 20px;
 }
 
 .new-todo input {
     border-radius: 8px;
     padding: 10px;
+}
+
+div.elenco > ul {
+    padding: 20px;
+    background-color: rgb(221, 223, 201);
+}
+
+div.elenco > ul > li {
+    padding: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.elenco > ul > li > hr {
+    color: rgb(141, 146, 146);
+}
+
+div.elenco i {
+   float: right;
 }
