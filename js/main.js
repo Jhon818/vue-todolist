@@ -5,6 +5,7 @@ const app = new Vue (
     el: "#root",
         data: {
           newToDo:"",
+          trueOrFalse: () => Math.random() >= 0.5,
           toDos: [{
             title: 'Fare i compiti',
             done: true,
@@ -37,13 +38,16 @@ const app = new Vue (
     },
 
     trueFalse() {
-           if (this.toDos.done === true) {
-          return  document.getElementById("list").style.color = "green";
-               
-           }
-           else {
-            return  document.getElementById("list").style.color = "red";
-           }
+        for (const key in this.toDos) {
+            if (this.toDos[key].done === true) {
+                return  document.getElementById("list").style.color = "green";
+                     
+                 }
+                 else {
+                  return  document.getElementById("list").style.color = "red";
+                 }
+        }
+           
     }
 }
     });
