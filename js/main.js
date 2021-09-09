@@ -5,7 +5,6 @@ const app = new Vue (
     el: "#root",
         data: {
           newToDo:"",
-          trueOrFalse: () => Math.random() >= 0.5,
           toDos: [{
             title: 'Fare i compiti',
             done: true,
@@ -36,8 +35,6 @@ const app = new Vue (
     removeToDo(index) {
         this.toDos.splice(index,1)
     },
-
-    
         trueFalse(index) {
             if (this.toDos[index].done === true) {
               this.toDos[index].done = false;
@@ -45,9 +42,13 @@ const app = new Vue (
             else{
               this.toDos[index].done = true;
             }
-          }
-           
-    
+          },
+        //  showUnder(index) {
+        //      if(this.toDos[index].checked === true) {
+        //         return true
+               
+        //      }
+        //  }
 }
     });
 

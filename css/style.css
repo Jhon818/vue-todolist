@@ -48,3 +48,16 @@ div.elenco > ul > li > hr {
 div.elenco i {
    float: right;
 }
+
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+
+.open {
+    height: 100px;
+    background-color: red;
+}
