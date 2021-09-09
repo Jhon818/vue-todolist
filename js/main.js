@@ -37,9 +37,12 @@ const app = new Vue (
     },
 
     trueFalse() {
-           if (document.getElementById("list").checked) {
+           if (this.toDos.done === true) {
           return  document.getElementById("list").style.color = "green";
                
+           }
+           else {
+            return  document.getElementById("list").style.color = "red";
            }
     }
 }
