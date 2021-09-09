@@ -1,0 +1,30 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.container  {
+    width: 65%;
+    height: 100vh;
+    margin: 0% auto;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    max-width: 300px;
+    text-align: center;
+    padding: 12px;
+}
+
+.new-todo {
+    text-align: center;
+}
+
+.new-todo input {
+    border-radius: 8px;
+    padding: 10px;
+}
